@@ -339,7 +339,7 @@ body{
 
 ```
 
-** webpack 命令 **
+**webpack 命令**
 >运行
 npm run <scripts标签下的一个key>
 npm run start
