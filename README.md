@@ -254,7 +254,7 @@ module.exports = {
 
 ## 生成react应用根节点
 
-**./src/index.jsinde**
+**./src/index.js**
 
 ```
 import React from 'react';
@@ -264,7 +264,7 @@ import App from './components/App';
 ReactDOM.render(<App />, document.getElementById('app'));
 ```
 
-**./src/component/App.js**
+**./src/components/App.js**
 
 ```
 import React, { Component } from 'react';
@@ -303,6 +303,61 @@ body{
   "start": "webpack-dev-server --mode development --open --hot",
   "build": "webpack --mode production"
 }
+```
+
+**完整 package.json**
+```
+{
+  "name": "react-webpack-starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --mode development --open --hot",
+    "build": "webpack --mode production"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "@babel/preset-react": "^7.7.4",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.4.1",
+    "html-webpack-plugin": "^3.2.0",
+    "style-loader": "^1.1.2",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1"
+  }
+}
+
+```
+
+** webpack 命令 **
+>运行
+npm run <scripts标签下的一个key>
+npm run start
+
+>其他
+```
+1.初始化webpack命令
+npm init
+
+2.安装webpack命令
+npm install webpack --save-dev
+
+3.安装webpack-dev-server命令
+npm install webpack-dev-server --save-dev
+
+4.运行webpack项目命令
+npm run dev
+
 ```
 
 注意，我们启用了`webpack-dev-server`的模块热更新功能（[HMR](https://webpack.js.org/concepts/hot-module-replacement/)），进一步提高我们的开发效率。
